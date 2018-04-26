@@ -53,7 +53,6 @@ module RailsbpInBrowser
       Launchy.open(output_file_path)
 
       `rm rails_best_practices_output.html`
-      `rm code_climate.html`
     end
   end
 end
