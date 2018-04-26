@@ -48,8 +48,8 @@ module RailsbpInBrowser
       f.close
       of.close
 
-      puts "Open file in Chrome"
-      Launchy::Browser.run('./code_climate.html')
+      puts "Open report in the Browser"
+      Launchy.open('./code_climate.html')
 
       `rm rails_best_practices_output.html`
       `rm code_climate.html`
