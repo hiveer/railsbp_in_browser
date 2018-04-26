@@ -5,7 +5,7 @@ supply more details on which code has problem. In order to get the specific code
 
 It will generate a more specific output in html format and open it in your default browser for you.
 
-![Example]('./images/railsbp_in_browser_examp.jpg')
+![sample](images/railsbp_in_browser_examp.jpg)
 
 ## Installation
 
