@@ -1,12 +1,15 @@
 # RailsbpInBrowser
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/railsbp_in_browser`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem based on 'rails_best_practices' which is used to analyze the code of Rails project. The output of 'rails_best_practices' is not very readable, which didn't
+supply more details on which code has problem. In order to get the specific code detail and it's problems, I created this gem.
 
-TODO: Delete this and the text above, and describe your gem
+It will generate a more specific output in html format and open it in your default browser for you.
+
+![Example]('./images/railsbp_in_browser_examp.jpg')
 
 ## Installation
 
-Add this line to your application's Gemfile:
+You could add it to you Gemfile(development group)
 
 ```ruby
 gem 'railsbp_in_browser'
@@ -16,13 +19,13 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself as(in the root directory of your Rails app):
 
     $ gem install railsbp_in_browser
 
 ## Usage
 
-TODO: Write usage instructions here
+run `$ railsbp_in_browser`
 
 ## Development
 
