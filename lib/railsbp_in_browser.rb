@@ -18,8 +18,9 @@ module RailsbpInBrowser
       puts "Generating the code climate ..."
       `rails_best_practices . > rails_best_practices_output.html`
 
+      output_file_path = "#{ENV['HOME']}/tmp/code_climate.html"
       f = File.open("rails_best_practices_output.html")
-      of = File.open("code_climate.html", 'w')
+      of = File.open(output_file_path, 'w')
       reg = /.*\[31m(.*):([0-9]+) - (.*)\e.*/
       f.each_line do |line|
         next unless reg.match(line)
@@ -49,7 +50,7 @@ module RailsbpInBrowser
       of.close
 
       puts "Open report in the Browser"
-      Launchy.open('./code_climate.html')
+      Launchy.open(output_file_path)
 
       `rm rails_best_practices_output.html`
       `rm code_climate.html`
