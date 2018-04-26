@@ -1,3 +1,3 @@
 module RailsbpInBrowser
-  VERSION = "0.2.0"
+  VERSION = "1.1.1"
 end
