@@ -52,7 +52,7 @@ module RailsbpInBrowser
       Launchy::Browser.run('./code_climate.html')
 
       `rm rails_best_practices_output.html`
-      # `rm code_climate.html`
+      `rm code_climate.html`
     end
   end
 end
