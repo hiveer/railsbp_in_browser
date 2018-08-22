@@ -14,11 +14,19 @@ module RailsbpInBrowser
       OnlineDocs::DOC_MAPPINGS[key]
     end
 
+    def check_and_create_dir dirname
+      unless File.directory?(dirname)
+        Dir.mkdir(dirname)
+      end
+    end
+
     def generate_html
       puts "Generating the code climate ..."
       `rails_best_practices . > rails_best_practices_output.html`
 
       output_file_path = "#{ENV['HOME']}/tmp/code_climate.html"
+      dirname = File.dirname output_file_path
+      check_and_create_dir dirname
       f = File.open("rails_best_practices_output.html")
       of = File.open(output_file_path, 'w')
       reg = /.*\[31m(.*):([0-9]+) - (.*)\e.*/
